@@ -1,1 +1,11 @@
-# subtleedge.com
+lsi: false
+safe: true
+source: doc
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  match_engine: mathjax
+  syntax_highlighter: rouge
+

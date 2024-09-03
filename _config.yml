@@ -29,7 +29,7 @@ twitter_username: subtleedge
 github_username: subtleedge
 
 # Build settings
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-minimal
 #plugins:
 #  - jekyll-feed
 # Exclude from processing.

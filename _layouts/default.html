@@ -22,5 +22,23 @@
                 class="logo"
             />
         </div>
+        <div class="email-container">
+            <span class="email-part">hi</span><span class="email-part">@</span
+            ><span class="email-part">subtleedge</span
+            ><span class="email-part">.com</span>
+        </div>
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var parts = document.querySelectorAll(".email-part");
+            var email = "";
+            parts.forEach(function (part) {
+                email += part.textContent;
+                part.style.display = "inline";
+            });
+            var container = document.querySelector(".email-container");
+            container.innerHTML =
+                '<a href="mailto:' + email + '">' + email + "</a>";
+        });
+    </script>
 </html>

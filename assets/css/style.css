@@ -37,6 +37,28 @@ html {
     margin-bottom: 10px;
 }
 
+.email-container {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.email-part {
+    display: none;
+}
+
+.email-container a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-container a:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     .logo {
         max-width: 150px;
@@ -44,6 +66,11 @@ html {
 
     .mascot {
         max-width: 100px;
+    }
+
+    .email-container {
+        margin-top: 15px;
+        font-size: 14px;
     }
 }
 

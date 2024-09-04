@@ -79,9 +79,25 @@ html {
 }
 
 @media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .mascot {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .email-container {
+        font-size: 14px;
+    }
 }
 
-/* Optional subtle animation for visual interest */
 @keyframes fadeIn {
     from {
         opacity: 0;

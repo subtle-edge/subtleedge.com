@@ -8,14 +8,15 @@
 
 body,
 html {
-    position: relative;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -23,10 +24,10 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
-    padding-bottom: 60px;
     box-sizing: border-box;
+    flex: 1;
+    text-align: center;
 }
 
 .logo {
@@ -42,8 +43,6 @@ html {
 }
 
 .email-container {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     font-size: 16px;
     color: var(--primary-color);
@@ -89,7 +88,7 @@ html {
     }
 
     .mascot {
-        max-width: 150px;
+        max-width: 168px;
         margin-bottom: 10px;
     }
 

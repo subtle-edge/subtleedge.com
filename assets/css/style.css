@@ -12,11 +12,26 @@ html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    background: url("/assets/images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundMove 30s linear infinite;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* Background Animation */
+@keyframes backgroundMove {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: top left;
+    }
+    100% {
+        background-position: center center;
+    }
 }
 
 .container {

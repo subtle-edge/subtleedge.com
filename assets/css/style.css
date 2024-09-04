@@ -73,34 +73,12 @@ html {
         padding-top: 40px;
     }
 
-    .logo {
-        max-width: 300px;
-        margin-bottom: 10px;
-    }
-
-    .mascot {
-        max-width: 185px;
-        margin-bottom: 10px;
-    }
-
     .email-container {
         margin-top: 10px;
-        font-size: 14px;
     }
 }
 
 @media (max-width: 400px) {
-    .logo {
-        max-width: 200px;
-    }
-
-    .mascot {
-        max-width: 100px;
-    }
-
-    .email-container {
-        font-size: 14px;
-    }
 }
 
 /* Optional subtle animation for visual interest */

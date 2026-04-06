@@ -7,7 +7,7 @@ permalink: /sms-consent
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent - Subtle Edge</title>
+    <title>SMS Consent - Subtle Edge LLC / Paper Tiger</title>
     <style>
         body {
             font-family: -apple-system, system-ui, sans-serif;
@@ -18,46 +18,91 @@ permalink: /sms-consent
             color: #333;
         }
         h1 { font-size: 1.4rem; margin-bottom: 1.5rem; }
-        h2 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.5rem; }
         p { margin-bottom: 1rem; }
+        .sample { background: #f5f5f5; padding: 1rem; border-radius: 6px; font-size: 0.9rem; margin: 1rem 0; }
         .footer { margin-top: 3rem; color: #999; font-size: 0.85rem; }
+        a { color: #333; }
     </style>
 </head>
 <body>
     <h1>SMS Consent Policy</h1>
 
-    <h2>How candidates are contacted</h2>
+    <h2>About this service</h2>
     <p>
-        Paper Tiger sends text messages to job candidates on behalf of
-        hiring organizations. Candidates are only contacted when an
-        authorized representative of the hiring organization provides
-        the candidate's phone number through the Paper Tiger platform.
+        <a href="/paper-tiger">Paper Tiger</a> is a conversational assessment
+        platform operated by Subtle Edge LLC. Hiring organizations use Paper
+        Tiger to send assessment invitations to participants via text message.
     </p>
 
-    <h2>Consent</h2>
+    <h2>How consent is collected (written, web-based)</h2>
     <p>
-        By providing a candidate's phone number, the organization
-        confirms the candidate shared it in a hiring context
-        (application, resume, or referral). The first message
-        identifies Paper Tiger, the hiring organization, and the
-        purpose of the assessment. The message also discloses that
-        the assessment involves a conversation with AI.
+        An authorized representative of the hiring organization enters the
+        participant's name and phone number into the Paper Tiger web dashboard.
+        By submitting this information, the organization confirms that the
+        participant provided their phone number in a hiring context
+        (application, resume, or referral) and consents to receiving assessment
+        communications.
+    </p>
+    <p>
+        The dashboard form requires the representative to select SMS as the
+        delivery method and enter the participant's phone number before
+        submission. This explicit action constitutes written opt-in through
+        a web form.
+    </p>
+
+    <h2>What messages are sent</h2>
+    <p>
+        Messages are transactional assessment invitations only, never marketing.
+        Participants receive:
+    </p>
+    <ul>
+        <li>An initial invitation with the organization name and assessment details</li>
+        <li>A link to begin the assessment when the participant is ready</li>
+        <li>A reminder if a scheduled time is approaching</li>
+    </ul>
+    <p>
+        Message frequency is low: typically 2 to 4 messages per assessment.
+        Standard message and data rates may apply.
+    </p>
+
+    <h2>Sample message</h2>
+    <div class="sample">
+        "Hi Jordan, Acme Corp has invited you to a Leadership Screen assessment
+        with Paper Tiger. This is an AI-powered conversation. When works for
+        you? Reply with a time like 'tomorrow 2pm' or 'now' to start right
+        away. Reply STOP to opt out. Reply HELP for help."
+    </div>
+
+    <h2>AI disclosure</h2>
+    <p>
+        The first message discloses that the assessment involves a conversation
+        with AI, consistent with the Illinois AI Act and California SB 243.
     </p>
 
     <h2>Opt-out</h2>
     <p>
-        Candidates can reply STOP at any time to opt out of all
-        future messages. Opt-out is immediate and permanent for
-        that organization.
+        Participants can reply STOP at any time to opt out of all future
+        messages. Opt-out is immediate and permanent for that organization.
+        Twilio processes STOP automatically at the carrier level.
     </p>
 
-    <h2>Message details</h2>
+    <h2>Help</h2>
     <p>
-        Messages are transactional assessment invitations only,
-        never marketing. Message frequency varies. Standard message
-        and data rates may apply.
+        Participants can reply HELP at any time to receive information about
+        the service and opt-out instructions.
     </p>
 
-    <p class="footer">Subtle Edge LLC / Paper Tiger</p>
+    <h2>Privacy</h2>
+    <p>
+        Participant phone numbers are stored on the invitation record only.
+        They are not added to a marketing list or shared with third parties.
+        Numbers are deleted per Subtle Edge LLC's data retention policy.
+    </p>
+
+    <p class="footer">
+        Subtle Edge LLC / Paper Tiger<br>
+        Contact: <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a>
+    </p>
 </body>
 </html>

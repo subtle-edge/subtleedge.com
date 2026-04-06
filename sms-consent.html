@@ -7,102 +7,147 @@ permalink: /sms-consent
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent - Subtle Edge LLC / Paper Tiger</title>
+    <title>SMS Consent Policy - Paper Tiger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, system-ui, sans-serif;
-            max-width: 600px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
+            font-family: 'Manrope', sans-serif;
+            background: #F4E4C1;
+            color: #3C3C3C;
             line-height: 1.7;
-            color: #333;
         }
-        h1 { font-size: 1.4rem; margin-bottom: 1.5rem; }
-        h2 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.5rem; }
-        p { margin-bottom: 1rem; }
-        .sample { background: #f5f5f5; padding: 1rem; border-radius: 6px; font-size: 0.9rem; margin: 1rem 0; }
-        .footer { margin-top: 3rem; color: #999; font-size: 0.85rem; }
-        a { color: #333; }
+        .header {
+            padding: 2rem 1.5rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #004D4D;
+        }
+        .logo-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .logo-icon svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #004D4D;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #004D4D;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        p { margin-bottom: 1rem; font-size: 0.95rem; }
+        ul { margin-bottom: 1rem; padding-left: 1.5rem; font-size: 0.95rem; }
+        li { margin-bottom: 0.3rem; }
+        a { color: #D2691E; }
+        a:hover { color: #B87333; }
+        .sample {
+            background: #FAF6F0;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            border-left: 3px solid #D2691E;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #9CAF88;
+            color: #8B8680;
+            font-size: 0.85rem;
+        }
+        .footer a { color: #8B8680; }
     </style>
 </head>
 <body>
-    <h1>SMS Consent Policy</h1>
-
-    <h2>About this service</h2>
-    <p>
-        <a href="/paper-tiger">Paper Tiger</a> is a conversational assessment
-        platform operated by Subtle Edge LLC. Hiring organizations use Paper
-        Tiger to send assessment invitations to participants via text message.
-    </p>
-
-    <h2>How consent is collected (written, web-based)</h2>
-    <p>
-        An authorized representative of the hiring organization enters the
-        participant's name and phone number into the Paper Tiger web dashboard.
-        By submitting this information, the organization confirms that the
-        participant provided their phone number in a hiring context
-        (application, resume, or referral) and consents to receiving assessment
-        communications.
-    </p>
-    <p>
-        The dashboard form requires the representative to select SMS as the
-        delivery method and enter the participant's phone number before
-        submission. This explicit action constitutes written opt-in through
-        a web form.
-    </p>
-
-    <h2>What messages are sent</h2>
-    <p>
-        Messages are transactional assessment invitations only, never marketing.
-        Participants receive:
-    </p>
-    <ul>
-        <li>An initial invitation with the organization name and assessment details</li>
-        <li>A link to begin the assessment when the participant is ready</li>
-        <li>A reminder if a scheduled time is approaching</li>
-    </ul>
-    <p>
-        Message frequency is low: typically 2 to 4 messages per assessment.
-        Standard message and data rates may apply.
-    </p>
-
-    <h2>Sample message</h2>
-    <div class="sample">
-        "Hi Jordan, Acme Corp has invited you to a Leadership Screen assessment
-        with Paper Tiger. This is an AI-powered conversation. When works for
-        you? Reply with a time like 'tomorrow 2pm' or 'now' to start right
-        away. Reply STOP to opt out. Reply HELP for help."
+    <div class="header">
+        <a href="/paper-tiger" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <defs><clipPath id="consent-logo-clip"><circle cx="12" cy="12" r="12"/></clipPath></defs>
+                    <g clip-path="url(#consent-logo-clip)" transform="rotate(-15 12 12)">
+                        <path d="M 0 0 L 24 0 L 24 9.12 Q 20 8.12, 16 9.12 Q 12 10.12, 8 9.62 Q 4 9.12, 0 9.12 Z" fill="#CD853F"/>
+                        <path d="M 0 9.12 Q 4 9.12, 8 9.62 Q 12 10.12, 16 9.12 Q 20 8.12, 24 9.12 L 24 18.24 Q 20 17.74, 16 18.24 Q 12 18.74, 8 18.24 Q 4 17.74, 0 18.24 Z" fill="#D2691E"/>
+                        <path d="M 0 18.24 Q 4 17.74, 8 18.24 Q 12 18.74, 16 18.24 Q 20 17.74, 24 18.24 L 24 24 L 0 24 Z" fill="#004D4D"/>
+                    </g>
+                </svg>
+            </div>
+            Paper Tiger
+        </a>
     </div>
 
-    <h2>AI disclosure</h2>
-    <p>
-        The first message discloses that the assessment involves a conversation
-        with AI, consistent with the Illinois AI Act and California SB 243.
-    </p>
+    <div class="content">
+        <h1>SMS Consent Policy</h1>
 
-    <h2>Opt-out</h2>
-    <p>
-        Participants can reply STOP at any time to opt out of all future
-        messages. Opt-out is immediate and permanent for that organization.
-        Twilio processes STOP automatically at the carrier level.
-    </p>
+        <h2>About this service</h2>
+        <p><a href="/paper-tiger">Paper Tiger</a> is a conversational assessment platform operated by Subtle Edge LLC. Hiring organizations use Paper Tiger to send assessment invitations to participants via text message.</p>
 
-    <h2>Help</h2>
-    <p>
-        Participants can reply HELP at any time to receive information about
-        the service and opt-out instructions.
-    </p>
+        <h2>How consent is collected (written, web-based)</h2>
+        <p>An authorized representative of the hiring organization enters the participant's name and phone number into the Paper Tiger web dashboard. By submitting this information, the organization confirms that the participant provided their phone number in a hiring context (application, resume, or referral) and consents to receiving assessment communications.</p>
+        <p>The dashboard form requires the representative to select SMS as the delivery method and enter the participant's phone number before submission. This explicit action constitutes written opt-in through a web form.</p>
 
-    <h2>Privacy</h2>
-    <p>
-        Participant phone numbers are stored on the invitation record only.
-        They are not added to a marketing list or shared with third parties.
-        Numbers are deleted per Subtle Edge LLC's data retention policy.
-    </p>
+        <h2>What messages are sent</h2>
+        <p>Messages are transactional assessment invitations only, never marketing. Participants receive:</p>
+        <ul>
+            <li>An initial invitation with the organization name and assessment details</li>
+            <li>A link to begin the assessment when the participant is ready</li>
+            <li>A reminder if a scheduled time is approaching</li>
+        </ul>
+        <p>Message frequency is low: typically 2 to 4 messages per assessment. Standard message and data rates may apply.</p>
 
-    <p class="footer">
-        Subtle Edge LLC / Paper Tiger<br>
-        Contact: <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a>
-    </p>
+        <h2>Sample message</h2>
+        <div class="sample">
+            "Hi Jordan, Acme Corp has invited you to a Leadership Screen assessment with Paper Tiger. This is an AI-powered conversation. When works for you? Reply with a time like 'tomorrow 2pm' or 'now' to start right away. Reply STOP to opt out. Reply HELP for help."
+        </div>
+
+        <h2>AI disclosure</h2>
+        <p>The first message discloses that the assessment involves a conversation with AI, consistent with the Illinois AI Act and California SB 243.</p>
+
+        <h2>Opt-out</h2>
+        <p>Participants can reply STOP at any time to opt out of all future messages. Opt-out is immediate and permanent for that organization. Twilio processes STOP automatically at the carrier level.</p>
+
+        <h2>Help</h2>
+        <p>Participants can reply HELP at any time to receive information about the service and opt-out instructions.</p>
+
+        <h2>Privacy</h2>
+        <p>Participant phone numbers are stored on the invitation record only. They are not added to a marketing list or shared with third parties. Numbers are deleted per Subtle Edge LLC's data retention policy.</p>
+
+        <div class="footer">
+            Subtle Edge LLC / Paper Tiger<br>
+            <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a> / <a href="mailto:gustin@trypapertiger.com">gustin@trypapertiger.com</a>
+        </div>
+    </div>
 </body>
 </html>

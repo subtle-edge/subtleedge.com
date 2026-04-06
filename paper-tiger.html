@@ -8,72 +8,117 @@ permalink: /paper-tiger
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper Tiger - Subtle Edge LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, system-ui, sans-serif;
-            max-width: 600px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
+            font-family: 'Manrope', sans-serif;
+            background: #F4E4C1;
+            color: #3C3C3C;
             line-height: 1.7;
-            color: #333;
         }
-        h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 2rem; }
-        h2 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.5rem; }
-        p { margin-bottom: 1rem; }
-        .footer { margin-top: 3rem; color: #999; font-size: 0.85rem; }
-        a { color: #333; }
+        .header {
+            padding: 2rem 1.5rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #004D4D;
+        }
+        .logo-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .logo-icon svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .subtitle {
+            color: #8B8680;
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #004D4D;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        p { margin-bottom: 1rem; font-size: 0.95rem; }
+        a { color: #D2691E; }
+        a:hover { color: #B87333; }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #9CAF88;
+            color: #8B8680;
+            font-size: 0.85rem;
+        }
+        .footer a { color: #8B8680; }
     </style>
 </head>
 <body>
-    <h1>Paper Tiger</h1>
-    <p class="subtitle">A product of Subtle Edge LLC</p>
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <defs><clipPath id="pt-logo-clip"><circle cx="12" cy="12" r="12"/></clipPath></defs>
+                    <g clip-path="url(#pt-logo-clip)" transform="rotate(-15 12 12)">
+                        <path d="M 0 0 L 24 0 L 24 9.12 Q 20 8.12, 16 9.12 Q 12 10.12, 8 9.62 Q 4 9.12, 0 9.12 Z" fill="#CD853F"/>
+                        <path d="M 0 9.12 Q 4 9.12, 8 9.62 Q 12 10.12, 16 9.12 Q 20 8.12, 24 9.12 L 24 18.24 Q 20 17.74, 16 18.24 Q 12 18.74, 8 18.24 Q 4 17.74, 0 18.24 Z" fill="#D2691E"/>
+                        <path d="M 0 18.24 Q 4 17.74, 8 18.24 Q 12 18.74, 16 18.24 Q 20 17.74, 24 18.24 L 24 24 L 0 24 Z" fill="#004D4D"/>
+                    </g>
+                </svg>
+            </div>
+            Paper Tiger
+        </div>
+    </div>
 
-    <h2>What Paper Tiger does</h2>
-    <p>
-        Paper Tiger is a conversational assessment platform for hiring
-        organizations. It conducts behavioral assessments through realistic
-        AI-powered conversations, providing evidence for people decisions
-        like hiring, promotion, and team development.
-    </p>
+    <div class="content">
+        <p class="subtitle">A product of Subtle Edge LLC</p>
 
-    <h2>How it works</h2>
-    <p>
-        An interviewer schedules an assessment from the Paper Tiger dashboard.
-        The participant receives an SMS invitation, self-schedules or starts
-        immediately, and has a conversation with an AI persona through their
-        browser. The conversation is scored on behavioral markers and the
-        results are available to the hiring organization.
-    </p>
+        <h2>What Paper Tiger does</h2>
+        <p>Paper Tiger is a conversational assessment platform for hiring organizations. It conducts behavioral assessments through realistic AI-powered conversations, providing evidence for people decisions like hiring, promotion, and team development.</p>
 
-    <h2>SMS communications</h2>
-    <p>
-        Paper Tiger sends transactional text messages to assessment
-        participants on behalf of hiring organizations. Messages include
-        assessment invitations, scheduling confirmations, and session links.
-        Messages are never marketing. See our
-        <a href="/sms-consent">SMS Consent Policy</a> for details on how
-        consent is collected, message frequency, and opt-out instructions.
-    </p>
+        <h2>How it works</h2>
+        <p>An interviewer schedules an assessment from the Paper Tiger dashboard. The participant receives an SMS invitation, self-schedules or starts immediately, and has a conversation with an AI persona through their browser. The conversation is scored on behavioral markers and the results are available to the hiring organization.</p>
 
-    <h2>Product access</h2>
-    <p>
-        Paper Tiger is currently in private pilot with select hiring
-        organizations. The product is accessible at
-        <a href="https://trypapertiger.com/?verify=1776120885-GT4U-yxaJ_H9ZoHsQYF0-83LaWU351H1_WcIXmS4560">trypapertiger.com</a>
-        by invitation.
-    </p>
+        <h2>SMS communications</h2>
+        <p>Paper Tiger sends transactional text messages to assessment participants on behalf of hiring organizations. Messages include assessment invitations, scheduling confirmations, and session links. Messages are never marketing. See our <a href="/sms-consent">SMS Consent Policy</a> for details on how consent is collected, message frequency, and opt-out instructions.</p>
 
-    <h2>About Subtle Edge LLC</h2>
-    <p>
-        Subtle Edge LLC is a software company focused on conversational AI
-        for workforce development. Paper Tiger is our primary product.
-    </p>
+        <h2>Product access</h2>
+        <p>Paper Tiger is currently in private pilot with select hiring organizations. The product is accessible at <a href="https://trypapertiger.com/?verify=1776120885-GT4U-yxaJ_H9ZoHsQYF0-83LaWU351H1_WcIXmS4560">trypapertiger.com</a> by invitation.</p>
 
-    <p class="footer">
-        Subtle Edge LLC<br>
-        <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a><br>
-        <a href="https://www.subtleedge.com">www.subtleedge.com</a>
-    </p>
+        <h2>About Subtle Edge LLC</h2>
+        <p>Subtle Edge LLC is a boutique software company focused on ML and AI products. Paper Tiger is a conversational AI tool built and operated by Subtle Edge.</p>
+
+        <div class="footer">
+            Subtle Edge LLC<br>
+            <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a> / <a href="mailto:gustin@trypapertiger.com">gustin@trypapertiger.com</a><br>
+            <a href="https://www.subtleedge.com">www.subtleedge.com</a>
+        </div>
+    </div>
 </body>
 </html>

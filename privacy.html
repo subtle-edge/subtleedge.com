@@ -1,13 +1,13 @@
 ---
 layout: null
-permalink: /sms-consent
+permalink: /privacy
 ---
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent Policy - Paper Tiger</title>
+    <title>Privacy Policy - Subtle Edge LLC / Paper Tiger</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -73,14 +73,6 @@ permalink: /sms-consent
         li { margin-bottom: 0.3rem; }
         a { color: #D2691E; }
         a:hover { color: #B87333; }
-        .sample {
-            background: #FAF6F0;
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            margin: 1rem 0;
-            border-left: 3px solid #D2691E;
-        }
         .footer {
             margin-top: 3rem;
             padding-top: 2rem;
@@ -89,6 +81,7 @@ permalink: /sms-consent
             font-size: 0.85rem;
         }
         .footer a { color: #8B8680; }
+        .updated { color: #8B8680; font-size: 0.85rem; margin-bottom: 2rem; }
     </style>
 </head>
 <body>
@@ -96,8 +89,8 @@ permalink: /sms-consent
         <a href="/paper-tiger" class="logo">
             <div class="logo-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <defs><clipPath id="consent-logo-clip"><circle cx="12" cy="12" r="12"/></clipPath></defs>
-                    <g clip-path="url(#consent-logo-clip)" transform="rotate(-15 12 12)">
+                    <defs><clipPath id="privacy-logo-clip"><circle cx="12" cy="12" r="12"/></clipPath></defs>
+                    <g clip-path="url(#privacy-logo-clip)" transform="rotate(-15 12 12)">
                         <path d="M 0 0 L 24 0 L 24 9.12 Q 20 8.12, 16 9.12 Q 12 10.12, 8 9.62 Q 4 9.12, 0 9.12 Z" fill="#CD853F"/>
                         <path d="M 0 9.12 Q 4 9.12, 8 9.62 Q 12 10.12, 16 9.12 Q 20 8.12, 24 9.12 L 24 18.24 Q 20 17.74, 16 18.24 Q 12 18.74, 8 18.24 Q 4 17.74, 0 18.24 Z" fill="#D2691E"/>
                         <path d="M 0 18.24 Q 4 17.74, 8 18.24 Q 12 18.74, 16 18.24 Q 20 17.74, 24 18.24 L 24 24 L 0 24 Z" fill="#004D4D"/>
@@ -109,40 +102,38 @@ permalink: /sms-consent
     </div>
 
     <div class="content">
-        <h1>SMS Consent Policy</h1>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: April 6, 2026</p>
 
-        <h2>About this service</h2>
-        <p><a href="/paper-tiger">Paper Tiger</a> is a conversational assessment platform operated by Subtle Edge LLC. Hiring organizations use Paper Tiger to send assessment invitations to participants via text message.</p>
+        <p>This privacy policy describes how Subtle Edge LLC ("we", "us") handles information collected through Paper Tiger, our conversational assessment platform.</p>
 
-        <h2>How consent is collected (written, web-based)</h2>
-        <p>An authorized representative of the hiring organization enters the participant's name and phone number into the Paper Tiger web dashboard. By submitting this information, the organization confirms that the participant provided their phone number in a hiring context (application, resume, or referral) and consents to receiving assessment communications.</p>
-        <p>The dashboard form requires the representative to select SMS as the delivery method and enter the participant's phone number before submission. This explicit action constitutes written opt-in through a web form.</p>
-
-        <h2>What messages are sent</h2>
-        <p>Messages are transactional assessment invitations only, never marketing. Participants receive:</p>
+        <h2>What we collect</h2>
+        <p>When a hiring organization schedules an assessment, they provide us with:</p>
         <ul>
-            <li>An initial invitation with the organization name and assessment details</li>
-            <li>A link to begin the assessment when the participant is ready</li>
-            <li>A reminder if a scheduled time is approaching</li>
+            <li>Participant name</li>
+            <li>Participant phone number (for SMS delivery)</li>
+            <li>Assessment configuration (scenario, persona, duration)</li>
         </ul>
-        <p>Message frequency is low: typically 2 to 4 messages per assessment. Standard message and data rates may apply.</p>
+        <p>During an assessment conversation, we collect the conversation audio and transcript for scoring purposes.</p>
 
-        <h2>Sample message</h2>
-        <div class="sample">
-            "Hi Jordan, Acme Corp has invited you to a Leadership Screen assessment with Paper Tiger. This is an AI-powered conversation. When works for you? Reply with a time like 'tomorrow 2pm' or 'now' to start right away. Reply STOP to opt out. Reply HELP for help."
-        </div>
+        <h2>How we use this information</h2>
+        <p>We use participant information solely to deliver and score the assessment on behalf of the hiring organization that scheduled it. We do not use participant data for any other purpose.</p>
 
-        <h2>AI disclosure</h2>
-        <p>The first message discloses that the assessment involves a conversation with AI, consistent with the Illinois AI Act and California SB 243.</p>
+        <h2>SMS data</h2>
+        <p>Phone numbers collected for SMS assessment invitations are stored on the invitation record only. We do not sell, share, or distribute SMS opt-in data or phone numbers to third parties for messaging or marketing purposes.</p>
 
-        <h2>Opt-out</h2>
-        <p>Participants can reply STOP at any time to opt out of all future messages. Opt-out is immediate and permanent for that organization. Twilio processes STOP automatically at the carrier level.</p>
+        <h2>Data sharing</h2>
+        <p>Assessment results are shared only with the hiring organization that scheduled the assessment. We do not sell participant data. We share data with third-party services only as necessary to operate the platform:</p>
+        <ul>
+            <li>Twilio for SMS delivery</li>
+            <li>Cloud infrastructure providers for hosting</li>
+        </ul>
 
-        <h2>Help</h2>
-        <p>Participants can reply HELP at any time to receive information about the service and opt-out instructions.</p>
+        <h2>Data retention</h2>
+        <p>Participant phone numbers and invitation records are retained for the duration of the assessment engagement. Organizations may request deletion of participant data at any time.</p>
 
-        <h2>Privacy</h2>
-        <p>Participant phone numbers are stored on the invitation record only. They are not added to a marketing list or shared with third parties. Numbers are deleted per Subtle Edge LLC's data retention policy. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+        <h2>Contact</h2>
+        <p>Questions about this policy: <a href="mailto:gustin@subtleedge.com">gustin@subtleedge.com</a></p>
 
         <div class="footer">
             Subtle Edge LLC / Paper Tiger<br>

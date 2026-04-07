@@ -81,8 +81,10 @@
                 part.style.display = "inline";
             });
             var container = document.querySelector(".email-container");
+            var footerLinks = container.querySelector(".footer-links");
+            var linksHtml = footerLinks ? footerLinks.outerHTML : "";
             container.innerHTML =
-                '<a href="mailto:' + email + '">' + email + "</a>";
+                '<a href="mailto:' + email + '">' + email + "</a>" + linksHtml;
         });
     </script>
 </html>

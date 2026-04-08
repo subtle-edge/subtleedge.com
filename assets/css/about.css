@@ -22,8 +22,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url("/assets/images/bg.jpg") no-repeat center top fixed;
-    background-size: cover;
+    background: #e6d9c0;
     color: #292420;
     line-height: 1.8;
     min-height: 100vh;
@@ -33,6 +32,15 @@ body {
 }
 
 body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("/assets/images/bg.jpg") no-repeat center top;
+    background-size: cover;
+    z-index: -2;
+}
+
+body::after {
     content: "";
     position: fixed;
     inset: 0;

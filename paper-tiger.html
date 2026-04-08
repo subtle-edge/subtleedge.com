@@ -70,13 +70,17 @@ permalink: /paper-tiger
         a { color: #D2691E; }
         a:hover { color: #B87333; }
         .footer {
+            position: relative;
+            text-align: center;
+            padding: 10px 0;
             margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #9CAF88;
+            font-size: 12px;
             color: #8B8680;
-            font-size: 0.85rem;
         }
-        .footer a { color: #8B8680; }
+        .footer a { color: #556b2f; text-decoration: none; opacity: 0.6; transition: opacity 0.3s; }
+        .footer a:hover { opacity: 1; }
+        .footer .footer-link-left { position: absolute; left: 0; }
+        .footer .footer-link-right { position: absolute; right: 0; }
     </style>
 </head>
 <body>
@@ -114,13 +118,16 @@ permalink: /paper-tiger
         <h2>About Subtle Edge LLC</h2>
         <p>Subtle Edge LLC is a boutique software company focused on ML and AI products. Paper Tiger is a conversational AI tool built and operated by Subtle Edge.</p>
 
-        <div class="footer">
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d2c4b0; color: #8B8680; font-size: 0.85rem; text-align: center;">
             Subtle Edge LLC<br>
             129 Rising Road NE, Floyd, VA 24091<br>
-            (540) 285-0052<br>
-            <a href="mailto:sayhello@subtleedge.com">sayhello@subtleedge.com</a><br>
-            <a href="https://www.subtleedge.com">www.subtleedge.com</a><br>
-            <a href="/privacy" style="opacity: 0.6; font-size: 0.8rem;">Privacy</a> &middot; <a href="/sms-consent" style="opacity: 0.6; font-size: 0.8rem;">SMS Consent</a>
+            (540) 285-0052
+        </div>
+
+        <div class="footer">
+            <span class="footer-link-left"><a href="/">Subtle Edge</a></span>
+            <a href="mailto:sayhello@subtleedge.com" style="font-size: 16px; opacity: 1;">sayhello@subtleedge.com</a>
+            <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
         </div>
     </div>
 </body>

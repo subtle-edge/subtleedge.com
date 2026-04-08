@@ -1,0 +1,165 @@
+---
+layout: null
+permalink: /about
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Subtle Edge</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e6d9c0;
+            color: #292420;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #d2c4b0 0%, #c4b8a0 30%, #b8a890 60%, #a5b5a9 100%);
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+        }
+        .hero .back {
+            display: inline-block;
+            color: #556b2f;
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+            margin-bottom: 2rem;
+        }
+        .hero .back:hover { opacity: 1; }
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: normal;
+            color: #292420;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .hero .subtitle {
+            font-size: 0.95rem;
+            color: #556b2f;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .content {
+            max-width: 540px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            flex: 1;
+        }
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #4a4440;
+        }
+
+        .product {
+            background: linear-gradient(135deg, rgba(165, 181, 169, 0.15) 0%, rgba(210, 196, 176, 0.15) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #d2c4b0;
+        }
+        .product-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9e7e6b;
+            margin-bottom: 0.5rem;
+        }
+        .product-name {
+            font-size: 1.3rem;
+            color: #292420;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .product p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .product a {
+            color: #9e7e6b;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .product a:hover { color: #556b2f; }
+
+        .location {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.85rem;
+            color: #8a8078;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            position: relative;
+            text-align: center;
+            padding: 10px 20px;
+            background: #e6d9c0;
+            font-size: 12px;
+        }
+        .footer .footer-link-left {
+            position: absolute;
+            left: 20px;
+        }
+        .footer .footer-link-right {
+            position: absolute;
+            right: 20px;
+        }
+        .footer a {
+            color: #556b2f;
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .footer a:hover { opacity: 1; }
+        .footer .email a {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <a href="/" class="back">&larr; Subtle Edge</a>
+        <h1>Subtle Edge</h1>
+        <p class="subtitle">Boutique Software</p>
+    </div>
+
+    <div class="content">
+        <p>Subtle Edge LLC is a boutique software company specializing in AI/ML, cryptography, and product development.</p>
+
+        <p>We build tools that bring nuance and sophistication to hard problems. Our work lives at the intersection of human insight and machine capability.</p>
+
+        <div class="product">
+            <p class="product-label">Our Product</p>
+            <p class="product-name">Paper Tiger</p>
+            <p>A conversational assessment platform. Paper Tiger conducts behavioral assessments through realistic AI-powered conversations, providing evidence for hiring and workforce development decisions.</p>
+            <a href="/paper-tiger">Learn more &rarr;</a>
+        </div>
+
+        <div class="location">
+            Floyd, Virginia
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="footer-link-left"><a href="/">Home</a></span>
+        <span class="email"><a href="mailto:sayhello@subtleedge.com">sayhello@subtleedge.com</a></span>
+        <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
+    </div>
+</body>
+</html>

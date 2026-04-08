@@ -60,15 +60,18 @@
                 alt="Subtle Edge Logo"
                 class="logo"
             />
+            <p class="tagline">Boutique Software</p>
         </div>
         <div class="email-container">
+            <span class="footer-link-left">
+                <a href="/about">About</a>
+            </span>
             <span class="email-part">sayhello</span
             ><span class="email-part">@</span
             ><span class="email-part">subtleedge</span
             ><span class="email-part">.com</span>
-            <span class="footer-links">
+            <span class="footer-link-right">
                 <a href="/privacy">Privacy</a>
-                <a href="/sms-consent">SMS Consent</a>
             </span>
         </div>
     </body>
@@ -80,11 +83,19 @@
                 email += part.textContent;
                 part.style.display = "inline";
             });
-            var container = document.querySelector(".email-container");
-            var footerLinks = container.querySelector(".footer-links");
-            var linksHtml = footerLinks ? footerLinks.outerHTML : "";
-            container.innerHTML =
-                '<a href="mailto:' + email + '">' + email + "</a>" + linksHtml;
+            var emailLink = document.createElement("a");
+            emailLink.href = "mailto:" + email;
+            emailLink.textContent = email;
+            var wrapper = document.querySelector(".email-center");
+            if (!wrapper) {
+                wrapper = document.createElement("span");
+                wrapper.className = "email-center";
+                var container = document.querySelector(".email-container");
+                parts.forEach(function (part) { part.remove(); });
+                container.insertBefore(wrapper, container.querySelector(".footer-link-right"));
+            }
+            wrapper.innerHTML = "";
+            wrapper.appendChild(emailLink);
         });
     </script>
 </html>

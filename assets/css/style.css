@@ -80,21 +80,36 @@ html {
     cursor: pointer;
 }
 
-.footer-links {
+.tagline {
+    font-size: 14px;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: -8px;
+}
+
+.footer-link-left {
+    position: absolute;
+    left: 20px;
+    font-size: 12px;
+}
+
+.footer-link-right {
     position: absolute;
     right: 20px;
     font-size: 12px;
 }
 
-.footer-links a {
+.footer-link-left a,
+.footer-link-right a {
     color: var(--email-color);
     text-decoration: none;
     opacity: 0.6;
-    margin-left: 12px;
     transition: opacity 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-link-left a:hover,
+.footer-link-right a:hover {
     opacity: 1;
 }
 

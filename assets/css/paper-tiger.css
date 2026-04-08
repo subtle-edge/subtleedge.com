@@ -118,7 +118,7 @@ li { margin-bottom: 0.3rem; }
     border-left: 3px solid #a15017;
 }
 
-a { color: #a15017; }
+a { color: #a15017; text-decoration: underline; text-underline-offset: 2px; }
 a:hover { color: #884313; }
 
 .footer {

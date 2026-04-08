@@ -25,6 +25,9 @@ body {
     background: #F4E4C1;
     color: #3C3C3C;
     line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -64,6 +67,7 @@ body {
     max-width: 640px;
     margin: 0 auto;
     padding: 0 1.5rem 3rem;
+    flex: 1;
 }
 
 h1 {
@@ -124,15 +128,10 @@ a:hover { color: #884313; }
 .footer {
     position: relative;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 20px;
     margin-top: 3rem;
     font-size: 12px;
-    color: #6a6661;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    background: #e6d9c0;
 }
 
 .footer a {
@@ -145,16 +144,10 @@ a:hover { color: #884313; }
 }
 
 .footer a:hover { opacity: 1; }
-.footer .footer-link-left { position: absolute; left: 1.5rem; }
-.footer .footer-link-right { position: absolute; right: 1.5rem; }
+.footer .footer-link-left { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
+.footer .footer-link-right { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
 .footer .email-link { font-size: 16px; opacity: 1; }
 .footer .email-part { display: none; }
-
-.footer-divider {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #9CAF88;
-}
 
 @media (max-width: 480px) {
     .footer {

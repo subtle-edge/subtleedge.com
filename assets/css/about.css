@@ -22,96 +22,83 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #e6d9c0;
+    background: url("/assets/images/bg.jpg") no-repeat center top fixed;
+    background-size: cover;
     color: #292420;
     line-height: 1.8;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    border-top: 3px solid #a5b5a9;
 }
 
-.hero {
-    background: linear-gradient(135deg, #d2c4b0 0%, #c4b8a0 30%, #b8a890 60%, #a5b5a9 100%);
-    padding: 4rem 1.5rem 3rem;
-    text-align: center;
-}
-
-.hero .back {
-    display: inline-block;
-    color: #52672d;
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-    margin-bottom: 2rem;
-}
-
-.hero .back:hover { opacity: 1; }
-
-.hero h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    color: #292420;
-    letter-spacing: 1px;
-    margin-bottom: 0.75rem;
-}
-
-.hero .subtitle {
-    font-size: 0.95rem;
-    color: #52672d;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(210, 196, 176, 0.88) 0%, rgba(196, 184, 160, 0.85) 30%, rgba(184, 168, 144, 0.85) 60%, rgba(165, 181, 169, 0.88) 100%);
+    z-index: -1;
 }
 
 .content {
     max-width: 540px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 6rem 1.5rem 4rem;
     flex: 1;
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     font-size: 1rem;
     color: #4a4440;
 }
 
+.lead {
+    font-size: 1.15rem;
+    color: #292420;
+    line-height: 2;
+    margin-bottom: 2.5rem;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background: #a5b5a9;
+    margin: 0 auto 3rem;
+}
+
 .product {
-    background: linear-gradient(135deg, rgba(165, 181, 169, 0.15) 0%, rgba(210, 196, 176, 0.15) 100%);
-    border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    border: 1px solid #d2c4b0;
+    border-left: 3px solid #a5b5a9;
+    padding: 0.25rem 0 0.25rem 2rem;
+    margin: 3rem 0;
 }
 
 .product-label {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #735b4e;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .product-name {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: #292420;
     margin-bottom: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-weight: normal;
 }
 
 .product p {
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .product a {
     color: #735b4e;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     transition: color 0.3s;
 }
@@ -120,10 +107,11 @@ p {
 
 .location {
     text-align: center;
-    padding: 2rem 0;
-    font-size: 0.85rem;
+    padding: 3rem 0 1rem;
+    font-size: 0.75rem;
     color: #665e58;
-    letter-spacing: 1px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .footer {
@@ -137,11 +125,15 @@ p {
 .footer .footer-link-left {
     position: absolute;
     left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .footer .footer-link-right {
     position: absolute;
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .footer a {
@@ -165,17 +157,11 @@ p {
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 2.5rem 1.25rem 2rem;
-    }
-    .hero h1 {
-        font-size: 1.6rem;
-    }
     .content {
-        padding: 2rem 1.25rem;
+        padding: 3.5rem 1.25rem 2.5rem;
     }
     .product {
-        padding: 1.5rem;
+        padding: 0.25rem 0 0.25rem 1.25rem;
     }
     .footer {
         position: static;

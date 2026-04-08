@@ -115,12 +115,16 @@ html {
 .footer-link-left {
     position: absolute;
     left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 12px;
 }
 
 .footer-link-right {
     position: absolute;
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 12px;
 }
 

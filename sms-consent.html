@@ -13,6 +13,23 @@ permalink: /sms-consent
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #F4E4C1;
+            color: #3C3C3C;
+            padding: 8px 16px;
+            font-size: 14px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 8px; }
+        :focus-visible {
+            outline: 2px solid #004D4D;
+            outline-offset: 2px;
+        }
         body {
             font-family: 'Manrope', sans-serif;
             background: #F4E4C1;
@@ -92,7 +109,8 @@ permalink: /sms-consent
     </style>
 </head>
 <body>
-    <div class="header">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="header">
         <span class="logo">
             <div class="logo-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -107,9 +125,9 @@ permalink: /sms-consent
             Paper Tiger
         </span>
         <p style="color: #8B8680; font-size: 0.8rem; margin-top: 0.25rem; margin-left: 32px;">by Subtle Edge LLC</p>
-    </div>
+    </header>
 
-    <div class="content">
+    <main id="main" class="content">
         <h1>SMS Consent Policy</h1>
 
         <h2>About this service</h2>
@@ -145,11 +163,12 @@ permalink: /sms-consent
         <h2>Privacy</h2>
         <p>Participant phone numbers are stored on the invitation record only. They are not added to a marketing list or shared with third parties. Numbers are deleted per Subtle Edge LLC's data retention policy. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
 
-        <div class="footer" style="position: relative; text-align: center; padding: 10px 0; font-size: 12px;">
-            <span style="position: absolute; left: 0;"><a href="/" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">Subtle Edge</a></span>
-            <a href="mailto:sayhello@subtleedge.com" style="color: #556b2f; text-decoration: none; font-size: 16px;">sayhello@subtleedge.com</a>
-            <span style="position: absolute; right: 0;"><a href="/privacy" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">Privacy</a></span>
-        </div>
-    </div>
+    </main>
+
+    <footer class="footer" style="position: relative; text-align: center; padding: 10px 1.5rem; font-size: 12px; max-width: 640px; margin: 0 auto;">
+        <span style="position: absolute; left: 1.5rem;"><a href="/" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">Subtle Edge</a></span>
+        <a href="mailto:sayhello@subtleedge.com" style="color: #556b2f; text-decoration: none; font-size: 16px;">sayhello@subtleedge.com</a>
+        <span style="position: absolute; right: 1.5rem;"><a href="/privacy" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">Privacy</a></span>
+    </footer>
 </body>
 </html>

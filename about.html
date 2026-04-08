@@ -10,6 +10,23 @@ permalink: /about
     <title>About - Subtle Edge</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e6d9c0;
+            color: #292420;
+            padding: 8px 16px;
+            font-size: 14px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 8px; }
+        :focus-visible {
+            outline: 2px solid #556b2f;
+            outline-offset: 2px;
+        }
         body {
             font-family: Arial, sans-serif;
             background: #e6d9c0;
@@ -136,13 +153,14 @@ permalink: /about
     </style>
 </head>
 <body>
-    <div class="hero">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="hero">
         <a href="/" class="back">&larr; Subtle Edge</a>
         <h1>Subtle Edge</h1>
         <p class="subtitle">Boutique Software</p>
-    </div>
+    </header>
 
-    <div class="content">
+    <main id="main" class="content">
         <p>Subtle Edge LLC is a boutique software company specializing in AI/ML, cryptography, and product development.</p>
 
         <p>We build tools that bring nuance and sophistication to hard problems. Our work lives at the intersection of human insight and machine capability.</p>
@@ -157,12 +175,12 @@ permalink: /about
         <div class="location">
             Floyd, Virginia
         </div>
-    </div>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         <span class="footer-link-left"><a href="/">Home</a></span>
         <span class="email"><a href="mailto:sayhello@subtleedge.com">sayhello@subtleedge.com</a></span>
         <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
-    </div>
+    </footer>
 </body>
 </html>

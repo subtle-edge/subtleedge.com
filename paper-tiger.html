@@ -13,6 +13,23 @@ permalink: /paper-tiger
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #F4E4C1;
+            color: #3C3C3C;
+            padding: 8px 16px;
+            font-size: 14px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 8px; }
+        :focus-visible {
+            outline: 2px solid #004D4D;
+            outline-offset: 2px;
+        }
         body {
             font-family: 'Manrope', sans-serif;
             background: #F4E4C1;
@@ -84,7 +101,8 @@ permalink: /paper-tiger
     </style>
 </head>
 <body>
-    <div class="header">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="header">
         <div class="logo">
             <div class="logo-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -98,9 +116,9 @@ permalink: /paper-tiger
             </div>
             Paper Tiger
         </div>
-    </div>
+    </header>
 
-    <div class="content">
+    <main id="main" class="content">
         <p class="subtitle">A product of Subtle Edge LLC</p>
 
         <h2>What Paper Tiger does</h2>
@@ -124,11 +142,12 @@ permalink: /paper-tiger
             (540) 285-0052
         </div>
 
-        <div class="footer">
-            <span class="footer-link-left"><a href="/">Subtle Edge</a></span>
-            <a href="mailto:sayhello@subtleedge.com" style="font-size: 16px; opacity: 1;">sayhello@subtleedge.com</a>
-            <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
-        </div>
-    </div>
+    </main>
+
+    <footer class="footer" style="max-width: 640px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+        <span class="footer-link-left"><a href="/">Subtle Edge</a></span>
+        <a href="mailto:sayhello@subtleedge.com" style="font-size: 16px; opacity: 1;">sayhello@subtleedge.com</a>
+        <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
+    </footer>
 </body>
 </html>

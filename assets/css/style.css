@@ -107,6 +107,8 @@ html {
     text-decoration: none;
     opacity: 0.6;
     transition: opacity 0.3s ease;
+    padding: 14px 8px;
+    margin: -14px -8px;
 }
 
 .footer-link-left a:hover,

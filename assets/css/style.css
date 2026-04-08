@@ -182,27 +182,43 @@ html {
     }
 }
 
-@keyframes reveal {
-    from {
+@keyframes surface {
+    0% {
         opacity: 0;
-        transform: translateY(12px);
     }
-    to {
+    40% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
 .mascot {
-    animation: reveal 0.7s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation: surface 2.4s ease both;
 }
 
 .logo {
-    animation: reveal 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.3s both;
+    animation: surface 2.4s ease 0.6s both;
+}
+
+@keyframes settle {
+    0% {
+        opacity: 0;
+        letter-spacing: 12px;
+    }
+    40% {
+        opacity: 0;
+        letter-spacing: 12px;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 3px;
+    }
 }
 
 .tagline {
-    animation: reveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.55s both;
+    animation: settle 2.2s ease 1.4s both;
 }
 
 @media (prefers-reduced-motion: reduce) {

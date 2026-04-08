@@ -158,3 +158,15 @@ html {
 .mascot {
     animation: fadeIn 2s ease-in;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    html {
+        animation: none;
+    }
+
+    .logo,
+    .mascot {
+        animation: none;
+    }
+}

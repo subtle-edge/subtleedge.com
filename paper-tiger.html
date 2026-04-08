@@ -7,97 +7,17 @@ permalink: /paper-tiger
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Tiger - Subtle Edge LLC</title>
+    <title>Paper Tiger - Subtle Edge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/paper-tiger.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .skip-link {
-            position: absolute;
-            top: -100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #F4E4C1;
-            color: #3C3C3C;
-            padding: 8px 16px;
-            font-size: 14px;
-            z-index: 100;
-            text-decoration: none;
-        }
-        .skip-link:focus { top: 8px; }
-        :focus-visible {
-            outline: 2px solid #004D4D;
-            outline-offset: 2px;
-        }
-        body {
-            font-family: 'Manrope', sans-serif;
-            background: #F4E4C1;
-            color: #3C3C3C;
-            line-height: 1.7;
-        }
-        .header {
-            padding: 2rem 1.5rem;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-family: 'Sora', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #004D4D;
-        }
-        .logo-icon {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            overflow: hidden;
-            position: relative;
-            flex-shrink: 0;
-        }
-        .logo-icon svg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .content {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-        }
         .subtitle {
             color: #8B8680;
             font-size: 0.9rem;
             margin-bottom: 2.5rem;
         }
-        h2 {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #004D4D;
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p { margin-bottom: 1rem; font-size: 0.95rem; }
-        a { color: #D2691E; }
-        a:hover { color: #B87333; }
-        .footer {
-            position: relative;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 3rem;
-            font-size: 12px;
-            color: #8B8680;
-        }
-        .footer a { color: #556b2f; text-decoration: none; opacity: 0.6; transition: opacity 0.3s; padding: 14px 8px; margin: -14px -8px; }
-        .footer a:hover { opacity: 1; }
-        .footer .footer-link-left { position: absolute; left: 0; }
-        .footer .footer-link-right { position: absolute; right: 0; }
     </style>
 </head>
 <body>
@@ -119,7 +39,7 @@ permalink: /paper-tiger
     </header>
 
     <main id="main" class="content">
-        <p class="subtitle">A product of Subtle Edge LLC</p>
+        <p class="subtitle">A product of Subtle Edge</p>
 
         <h2>What Paper Tiger does</h2>
         <p>Paper Tiger is a conversational assessment platform for hiring organizations. It conducts behavioral assessments through realistic AI-powered conversations, providing evidence for people decisions like hiring, promotion, and team development.</p>
@@ -133,21 +53,33 @@ permalink: /paper-tiger
         <h2>Product access</h2>
         <p>Paper Tiger is currently in private pilot with select hiring organizations. Access is by invitation only.</p>
 
-        <h2>About Subtle Edge LLC</h2>
-        <p>Subtle Edge LLC is a boutique software company focused on ML and AI products. Paper Tiger is a conversational AI tool built and operated by Subtle Edge.</p>
+        <h2>About Subtle Edge</h2>
+        <p>Subtle Edge is a boutique software company focused on ML and AI products. Paper Tiger is a conversational AI tool built and operated by Subtle Edge.</p>
 
         <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d2c4b0; color: #8B8680; font-size: 0.85rem; text-align: center;">
-            Subtle Edge LLC<br>
-            129 Rising Road NE, Floyd, VA 24091<br>
-            (540) 285-0052
+            Subtle Edge &middot; Floyd, VA
         </div>
 
     </main>
 
-    <footer class="footer" style="max-width: 640px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    <footer class="footer">
         <span class="footer-link-left"><a href="/">Subtle Edge</a></span>
-        <a href="mailto:sayhello@subtleedge.com" style="font-size: 16px; opacity: 1;">sayhello@subtleedge.com</a>
+        <span class="email-part">sayhello</span><span class="email-part">@</span><span class="email-part">subtleedge</span><span class="email-part">.com</span>
         <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
     </footer>
+    <script>
+        (function() {
+            var parts = document.querySelectorAll(".email-part");
+            var email = "";
+            parts.forEach(function(p) { email += p.textContent; });
+            var link = document.createElement("a");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+            link.className = "email-link";
+            var parent = parts[0].parentNode;
+            parts.forEach(function(p) { p.remove(); });
+            parent.insertBefore(link, parent.querySelector(".footer-link-right"));
+        })();
+    </script>
 </body>
 </html>

@@ -7,98 +7,11 @@ permalink: /privacy
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Subtle Edge LLC / Paper Tiger</title>
+    <title>Privacy Policy - Subtle Edge / Paper Tiger</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .skip-link {
-            position: absolute;
-            top: -100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #F4E4C1;
-            color: #3C3C3C;
-            padding: 8px 16px;
-            font-size: 14px;
-            z-index: 100;
-            text-decoration: none;
-        }
-        .skip-link:focus { top: 8px; }
-        :focus-visible {
-            outline: 2px solid #004D4D;
-            outline-offset: 2px;
-        }
-        body {
-            font-family: 'Manrope', sans-serif;
-            background: #F4E4C1;
-            color: #3C3C3C;
-            line-height: 1.7;
-        }
-        .header {
-            padding: 2rem 1.5rem;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-family: 'Sora', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #004D4D;
-        }
-        .logo-icon {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            overflow: hidden;
-            position: relative;
-            flex-shrink: 0;
-        }
-        .logo-icon svg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .content {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-        }
-        h1 {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #004D4D;
-            margin-bottom: 1.5rem;
-        }
-        h2 {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #004D4D;
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p { margin-bottom: 1rem; font-size: 0.95rem; }
-        ul { margin-bottom: 1rem; padding-left: 1.5rem; font-size: 0.95rem; }
-        li { margin-bottom: 0.3rem; }
-        a { color: #D2691E; }
-        a:hover { color: #B87333; }
-        .footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #9CAF88;
-            color: #8B8680;
-            font-size: 0.85rem;
-        }
-        .footer a { color: #8B8680; }
-</style>
+    <link rel="stylesheet" href="/assets/css/paper-tiger.css">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -116,7 +29,7 @@ permalink: /privacy
             </div>
             Paper Tiger
         </span>
-        <p style="color: #8B8680; font-size: 0.8rem; margin-top: 0.25rem; margin-left: 32px;">by Subtle Edge LLC</p>
+        <p style="color: #8B8680; font-size: 0.8rem; margin-top: 0.25rem; margin-left: 32px;">by Subtle Edge</p>
     </header>
 
     <main id="main" class="content">
@@ -154,10 +67,24 @@ permalink: /privacy
 
     </main>
 
-    <footer class="footer" style="position: relative; text-align: center; padding: 10px 1.5rem; font-size: 12px; max-width: 640px; margin: 0 auto;">
-        <span style="position: absolute; left: 1.5rem;"><a href="/" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">Subtle Edge</a></span>
-        <a href="mailto:sayhello@subtleedge.com" style="color: #556b2f; text-decoration: none; font-size: 16px;">sayhello@subtleedge.com</a>
-        <span style="position: absolute; right: 1.5rem;"><a href="/sms-consent" style="color: #556b2f; text-decoration: none; opacity: 0.6; padding: 14px 8px; margin: -14px -8px;">SMS Consent</a></span>
+    <footer class="footer footer-divider">
+        <span class="footer-link-left"><a href="/">Subtle Edge</a></span>
+        <span class="email-part">sayhello</span><span class="email-part">@</span><span class="email-part">subtleedge</span><span class="email-part">.com</span>
+        <span class="footer-link-right"><a href="/sms-consent">SMS Consent</a></span>
     </footer>
+    <script>
+        (function() {
+            var parts = document.querySelectorAll(".email-part");
+            var email = "";
+            parts.forEach(function(p) { email += p.textContent; });
+            var link = document.createElement("a");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+            link.className = "email-link";
+            var parent = parts[0].parentNode;
+            parts.forEach(function(p) { p.remove(); });
+            parent.insertBefore(link, parent.querySelector(".footer-link-right"));
+        })();
+    </script>
 </body>
 </html>

@@ -150,6 +150,36 @@ permalink: /about
             opacity: 1;
             font-size: 16px;
         }
+        .email-part {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2.5rem 1.25rem 2rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 2rem 1.25rem;
+            }
+            .product {
+                padding: 1.5rem;
+            }
+            .footer {
+                position: static;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                padding: 12px 20px;
+            }
+            .footer .footer-link-left,
+            .footer .footer-link-right {
+                position: static;
+            }
+        }
     </style>
 </head>
 <body>
@@ -161,7 +191,7 @@ permalink: /about
     </header>
 
     <main id="main" class="content">
-        <p>Subtle Edge LLC is a boutique software company specializing in AI/ML, cryptography, and product development.</p>
+        <p>Subtle Edge is a boutique software company specializing in AI/ML, cryptography, and product development.</p>
 
         <p>We build tools that bring nuance and sophistication to hard problems. Our work lives at the intersection of human insight and machine capability.</p>
 
@@ -179,8 +209,21 @@ permalink: /about
 
     <footer class="footer">
         <span class="footer-link-left"><a href="/">Home</a></span>
-        <span class="email"><a href="mailto:sayhello@subtleedge.com">sayhello@subtleedge.com</a></span>
+        <span class="email"><span class="email-part">sayhello</span><span class="email-part">@</span><span class="email-part">subtleedge</span><span class="email-part">.com</span></span>
         <span class="footer-link-right"><a href="/privacy">Privacy</a></span>
     </footer>
+    <script>
+        (function() {
+            var parts = document.querySelectorAll(".email-part");
+            var email = "";
+            parts.forEach(function(p) { email += p.textContent; });
+            var link = document.createElement("a");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+            var wrapper = parts[0].parentNode;
+            parts.forEach(function(p) { p.remove(); });
+            wrapper.appendChild(link);
+        })();
+    </script>
 </body>
 </html>

@@ -21,14 +21,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Libre Baskerville', serif;
     background: #e6d9c0;
     color: #292420;
     line-height: 1.8;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    border-top: 3px solid #a5b5a9;
 }
 
 body::before {
@@ -61,16 +60,42 @@ p {
     color: #4a4440;
 }
 
+.founder {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #665e58;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
 .lead {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: #292420;
-    line-height: 2;
-    margin-bottom: 4rem;
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.4),
+        0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.services {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    color: #4a4440;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.4),
+        0 -1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .product {
-    border-left: 3px solid #a5b5a9;
-    padding: 0.25rem 0 0.25rem 2rem;
+    padding: 0.25rem 0;
     margin: 0 0 3rem;
 }
 
@@ -80,6 +105,7 @@ p {
 }
 
 .product a {
+    font-family: 'Jost', sans-serif;
     color: #735b4e;
     text-decoration: none;
     font-size: 0.75rem;
@@ -91,20 +117,25 @@ p {
 .product a:hover { color: #52672d; }
 
 .location {
+    font-family: 'Jost', sans-serif;
     text-align: center;
     padding: 3rem 0 1rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: #665e58;
     letter-spacing: 4px;
     text-transform: uppercase;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        0 -1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .footer {
+    font-family: 'Jost', sans-serif;
     position: relative;
     text-align: center;
     padding: 10px 20px;
     background: #e6d9c0;
-    font-size: 12px;
+    font-size: 0.875rem;
 }
 
 .footer .footer-link-left {
@@ -124,7 +155,7 @@ p {
 .footer a {
     color: #52672d;
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: opacity 0.3s;
     padding: 14px 8px;
     margin: -14px -8px;
@@ -146,7 +177,7 @@ p {
         padding: 3.5rem 1.25rem 2.5rem;
     }
     .product {
-        padding: 0.25rem 0 0.25rem 1.25rem;
+        padding: 0.25rem 0;
     }
     .footer {
         position: static;
